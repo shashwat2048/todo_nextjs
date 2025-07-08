@@ -1,4 +1,5 @@
 "use client";
+//@tsno
 import { useState, useEffect } from "react";
 import { Plus, X, Pencil } from "lucide-react";
 import EditTaskModal from "./components/modal/EditTaskModal";
@@ -55,7 +56,7 @@ export default function Home() {
       <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 text-black">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8 text-center">
-            Your To‑Do List
+            To‑Do List
           </h1>
 
           {/* Add Form */}
@@ -130,16 +131,14 @@ export default function Home() {
                   />
                   <div className="ml-4">
                     <h3
-                      className={`text-lg font-medium text-gray-800 ${
-                        task.completed ? "line-through" : ""
-                      }`}
+                      className={`text-lg font-medium text-gray-800 ${task.completed ? "line-through" : ""
+                        }`}
                     >
                       {task.title}
                     </h3>
                     <p
-                      className={`text-gray-600 ${
-                        task.completed ? "line-through" : ""
-                      }`}
+                      className={`text-gray-600 ${task.completed ? "line-through" : ""
+                        }`}
                     >
                       {task.description}
                     </p>
